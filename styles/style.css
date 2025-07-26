@@ -20,6 +20,7 @@ main {
   background-color: #ffffff;
   max-width: 640px;
   margin: 40px auto;
+  width: 90%;
   padding: 2rem;
   border-radius: 20px;
 }
@@ -43,19 +44,90 @@ ul li::marker {
   color: #854c41;
 }
 
+/* prep-time */
 .prep-time {
   background-color: #fff7fc;
   padding: 1rem;
 }
 
-.prep-title {
+.prep-time h2 {
   color: #6d2a45;
 }
 
-.prep-time ul li::marker {
-  color: #6d2a45;
+.prep-time ul {
+  padding-left: 1rem;
 }
 
 .prep-time ul li {
   margin: 1rem;
+  text-indent: 1rem;
+}
+.prep-time ul li::marker {
+  color: #6d2a45;
+}
+
+/* ingredients */
+.ingredients ul li {
+  margin: 1rem;
+  text-indent: 1rem;
+}
+
+/* instructions */
+
+.instructions {
+  border-top: 1px solid #e8eaee;
+  border-bottom: 1px solid #e8eaee;
+  padding-top: 2rem;
+}
+.instructions ol {
+  padding-left: 2rem;
+}
+
+.instructions ol li {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.instructions ol li::marker {
+  color: #6d2a45;
+  font-weight: bold;
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 2rem;
+}
+
+table tr {
+  border-bottom: 1px solid #e8eaee;
+}
+
+table td {
+  padding: 1rem 0;
+}
+
+table td:last-child {
+  color: #854c41;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 0;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  /* Fix the selector - should be img not image */
+  main img {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
 }
