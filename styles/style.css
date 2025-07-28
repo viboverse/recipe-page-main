@@ -3,9 +3,22 @@
   src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
 
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
 body {
   font-family: "Outfit", Arial, sans-serif;
-  background-color: #f3e5d8;
+  background-color: var(--stone-100);
+  color: var(--stone-900);
+  font-size: 16px;
 }
 
 section,
@@ -16,8 +29,15 @@ table {
   margin-bottom: 2rem;
 }
 
+h2,
+ul li::marker,
+ol li::marker {
+  color: var(--brown-800);
+  font-weight: bold;
+}
+
 main {
-  background-color: #ffffff;
+  background-color: var(--white);
   max-width: 640px;
   margin: 40px auto;
   width: 90%;
@@ -31,27 +51,14 @@ main img {
   border-radius: 20px;
 }
 
-h2 {
-  color: #854c41;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
-ul li::marker {
-  color: #854c41;
-}
-
 /* prep-time */
 .prep-time {
-  background-color: #fff7fc;
+  background-color: var(--rose-50);
   padding: 1rem;
 }
 
 .prep-time h2 {
-  color: #6d2a45;
+  color: var(--rose-800);
 }
 
 .prep-time ul {
@@ -62,8 +69,9 @@ ul li::marker {
   margin: 1rem;
   text-indent: 1rem;
 }
+
 .prep-time ul li::marker {
-  color: #6d2a45;
+  color: var(--rose-800);
 }
 
 /* ingredients */
@@ -75,8 +83,7 @@ ul li::marker {
 /* instructions */
 
 .instructions {
-  border-top: 1px solid #e8eaee;
-  border-bottom: 1px solid #e8eaee;
+  border-block: 1px solid var(--stone-150);
   padding-top: 2rem;
 }
 .instructions ol {
@@ -88,46 +95,40 @@ ul li::marker {
   padding-left: 1rem;
 }
 
-.instructions ol li::marker {
-  color: #6d2a45;
-  font-weight: bold;
-}
-
 /* table */
 table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   margin-left: 2rem;
 }
 
 table tr {
-  border-bottom: 1px solid #e8eaee;
+  border-bottom: 1px solid var(--stone-150);
 }
 
 table td {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 table td:last-child {
-  color: #854c41;
+  color: var(--brown-800);
 }
 
-@media (max-width: 480px) {
+.attribution {
+  text-align: center;
+  color: var(--stone-600);
+}
+
+@media (max-width: 375px) {
   main {
-    padding: 0;
     width: 100%;
-    margin: 2rem auto;
+    margin: 0;
+    padding: 0;
     border-radius: 0;
   }
 
-  body {
-    padding: 0;
-  }
-
-  /* Fix the selector - should be img not image */
   main img {
     width: 100%;
     border-radius: 0;
-    margin: 0;
   }
 }
